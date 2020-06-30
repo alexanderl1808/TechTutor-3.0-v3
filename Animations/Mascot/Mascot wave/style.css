@@ -1,0 +1,33 @@
+#ruka-mahanje{
+    animation-name: mahanje-ruke;
+    animation-iteration-count: infinite;
+    animation-duration: 2.5s;
+    transform-origin: 70% 70%; 
+}
+
+@keyframes mahanje-ruke {
+    0%{
+        transform: rotate( 0.0deg);
+    }
+
+    20%{
+        transform: rotate(4deg);
+    }
+
+    40%{
+        transform: rotate(-2deg);
+    }
+
+    60% {
+        transform: rotate(4deg);
+    }
+
+    80% {
+        transform: rotate(-2deg);
+    }
+
+    100%{
+        transform: rotate(0.0deg);
+    }
+
+}

@@ -1,0 +1,189 @@
+@import 'config';
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html:lang(sr){
+    .navbar__lang--sr{
+        color: $color-primary;
+    }
+}
+
+html:lang(en){
+    .navbar__lang--en{
+        color: $color-primary;
+    }
+}
+
+body{
+    background-color: $color-bg;
+}
+
+h1, h2, h4{
+    font-family: $font-primary;
+    color: $color-primary;
+    text-align: center;
+}
+
+h3, p{
+    font-family: $font-secondary;
+    color: $color-secondary;
+    text-align: center;
+}
+
+h1{
+    font-size: $font-extra-large;
+}
+
+h2{
+    font-size: $font-large;
+}
+
+h3{
+    font-size: $font-medium;
+}
+
+h4, p{
+    font-size: $font-small;
+}
+
+p{
+    line-height: 1.6;
+}
+
+svg{
+    overflow: visible;
+}
+
+header{
+    background-color: $color-bg;
+    height: 120px;
+    position: relative; // Because nav is absolute
+}
+
+footer{
+    background-color: #0D0D0D;
+
+    h3{
+        font-size: $font-small;
+    }
+
+    h2{
+        font-size: $font-medium;
+    }
+}
+
+.footer-copy{
+    padding: 24px 0;
+}
+
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+    background-color: rgba(20, 20, 20, .8);
+    transition: all .5s ease;
+
+    ul{
+        margin: 0;
+        text-align: center;
+    }
+
+    li{
+        margin: 0;
+        list-style: none;
+        margin: 10px;
+    }
+
+    &__link{
+        color: $color-secondary;
+        font-family: $font-secondary;
+        font-size: $font-medium;
+        text-decoration: none;
+    }
+
+    &__lang{
+        color: $color-secondary;
+        font-family: $font-secondary;
+    }
+}
+
+.logo{
+    width: 120px;
+}
+
+.burger{
+    cursor: pointer;
+    z-index: 10;
+
+    &__line{
+        height: 1px;
+        width: 50px;
+        background-color: $color-primary;
+        margin: 10px;
+    }
+}
+
+.pointer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__img{
+        background-image: url(../Images/pointer.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100px;
+        height: 55px;
+    }
+}
+
+.btn{
+    text-decoration: none;
+    font-family: $font-primary;
+    color: $color-primary;
+    border: 2px solid $color-primary;
+    padding: 10px;
+    font-size: $font-medium;
+}
+
+.header-container, .main-container, .footer-container{
+    max-width: 1600px;
+    margin: auto;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 24px 0 24px;
+}
+
+.main-container{
+    padding: 0 24px 0 24px;
+}
+
+.footer-container{
+    padding: 0 24px 24px 24px;
+}
+
+::-moz-selection{
+    color: #141414;
+    background: $color-primary;
+}
+
+::selection{
+    color: #141414;
+    background: $color-primary;
+}
+
+// Animations
+.navbar--animate{
+    transform: translateY(120px);
+}
+

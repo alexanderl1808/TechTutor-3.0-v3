@@ -1,0 +1,40 @@
+.starting-page{
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__content{
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.home-section{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__text{
+        margin-bottom: 50px;
+    }
+
+    &__heading{
+        margin-bottom: 20px;
+    }
+
+    &__mascot{
+        width: 85vw;
+    }
+
+    &--img{
+        background-image: url(../Images/slika-skole-mobile.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
