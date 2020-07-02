@@ -1,0 +1,46 @@
+@import 'config';
+
+table{
+    text-align: center;
+    font-size: $font-small;
+    background-color: $color-bg;
+    border-radius: 5px;
+    box-shadow: 5px 20px 30px black;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 15px;
+}
+
+th{
+    margin: 0;
+    color: $color-primary;
+    font-family: $font-primary;
+}
+
+td{
+    margin: 0;
+    padding: 0 5px 0 5px;
+    color: $color-secondary;
+    font-family: $font-secondary;
+}
+
+.final-price-td{
+    color: $color-primary;
+    font-family: $font-primary;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.conf-desc{
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.conf-table{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}

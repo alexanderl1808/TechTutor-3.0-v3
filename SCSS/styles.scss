@@ -52,6 +52,7 @@ h4, p{
 
 p{
     line-height: 1.6;
+    padding: 10px;
 }
 
 svg{
@@ -61,7 +62,9 @@ svg{
 header{
     background-color: $color-bg;
     height: 120px;
-    position: relative; // Because nav is absolute
+    position: sticky; // Because nav is absolute
+    top: 0;
+    z-index: 10;
 }
 
 footer{
@@ -87,7 +90,7 @@ footer{
     right: 0;
     transform: translateY(-100%);
     background-color: rgba(20, 20, 20, .8);
-    transition: all .5s ease;
+    transition: transform .5s ease;
 
     ul{
         margin: 0;
@@ -105,6 +108,11 @@ footer{
         font-family: $font-secondary;
         font-size: $font-medium;
         text-decoration: none;
+        transition: color .2s ease;
+    }
+
+    &__link:hover{
+        color: $color-primary;
     }
 
     &__lang{
@@ -134,6 +142,8 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transform: translateY(10px);
+    transition: transform .5s ease;
 
     &__img{
         background-image: url(../Images/pointer.png);
@@ -141,6 +151,7 @@ footer{
         background-repeat: no-repeat;
         width: 100px;
         height: 55px;
+        cursor: pointer;
     }
 }
 
@@ -149,8 +160,15 @@ footer{
     font-family: $font-primary;
     color: $color-primary;
     border: 2px solid $color-primary;
-    padding: 10px;
+    padding: 8px;
     font-size: $font-medium;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.btn:hover{
+    color: black;
+    background-color: $color-primary;
 }
 
 .header-container, .main-container, .footer-container{
@@ -185,5 +203,21 @@ footer{
 // Animations
 .navbar--animate{
     transform: translateY(120px);
+}
+
+.pointer--animate{
+    transform: translateY(0);
+}
+
+.para-container--animate-toggle{
+    transform: scale(1.03);
+    transition: transform .5s ease;
+}
+
+.para--animate-toggle{
+    border-radius: 5px;
+    box-shadow: 5px 20px 30px black;
+    background-color: rgba(0, 0, 0, .5);
+    transition: box-shadow .5s ease, background-color .5s ease;
 }
 
