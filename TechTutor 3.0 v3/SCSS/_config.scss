@@ -1,0 +1,40 @@
+@font-face{
+    font-family: font-primary;
+    src: url(../Fonts/MADE_TOMMY_Black_PERSONAL_USE.otf) format("opentype");
+}
+
+@font-face{
+    font-family: font-secondary;
+    src: url(../Fonts/OpenSans-Bold.ttf) format("truetype");
+}
+
+:root{
+    --color-primary: #54DE62;
+    --color-secondary: #9C9F9C;
+    --font-primary: font-primary, sans-serif;
+    --font-secondary: font-secondary, sans-serif;
+    --color-bg: #141414;
+    --font-extra-large: 6rem;
+    --font-large: 2.5rem;
+    --font-medium: 1.2rem;
+    --font-small: 1rem;
+}
+
+@media (min-width: 768px){
+    :root{
+        --font-extra-large: 8rem;
+        --font-large: 3rem;
+        --font-medium: 2rem;
+        --font-small: 1.5rem;
+    }
+}
+
+@media (min-width: 1190px){
+    :root{
+        --font-extra-large: 10rem;
+        --font-large: 3.5rem;
+    }
+}
+
+
+

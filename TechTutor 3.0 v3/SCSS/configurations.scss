@@ -1,0 +1,55 @@
+@import 'config';
+
+table{
+    text-align: center;
+    font-size: var(--font-small);
+    background-color: var(--color-bg);
+    border-radius: 5px;
+    box-shadow: 5px 20px 30px black;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 15px;
+}
+
+th{
+    margin: 0;
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+}
+
+td{
+    margin: 0;
+    padding: 0 5px 0 5px;
+    color: var(--color-secondary);
+    font-family: var(--font-secondary);
+}
+
+tr{
+    a{  
+        line-height: 3;
+    }
+   
+}
+
+.final-price-td{
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+    text-align: center;
+    padding-top: 15px;
+}
+
+.conf-desc{
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.conf-table{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@import 'media-configurations';

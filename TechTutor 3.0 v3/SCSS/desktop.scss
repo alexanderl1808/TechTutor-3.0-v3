@@ -1,0 +1,124 @@
+@import 'config';
+
+.dekstop-starting-page{
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__heading{
+        font-size: calc(var(--font-extra-large) - 1.5rem);
+    }
+}
+
+// It has to be outside becase of opacity specificity
+.arrow{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute; 
+    top: 50%;
+    z-index: 10;
+    transition: opacity .5s ease;
+    opacity: 0;
+}
+
+.desktop-section{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    overflow: hidden;
+    background-position: center;
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+
+    // It has to be inside because of font-size specificity
+    .fa-arrow-left, .fa-arrow-right{
+        color: var(--color-secondary);
+        font-size: var(--font-large);
+        cursor: pointer;
+    }
+
+    &__img-container{
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity .5s ease, transform .5s ease;
+        opacity: 0;
+        top: 30%;
+    }
+
+    &__img-price-container{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+        cursor: normal;
+    }
+
+    &__img1{
+        background-image: url(../Images/g1.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__price{
+        text-align: center;
+        color: var(--color-primary);
+        font-size: var(--font-large);
+        font-family: var(--font-primary);
+        margin-top: 30px;
+    }
+
+    &__para-container{
+        width: 80%;
+        opacity: 1;
+        transition: opacity .5s ease, transform .5s ease; // transform for para-container scale animation
+        pointer-events: all;
+    }
+}
+
+.desktop-section:nth-child(2){background-image: url(../Images/racunari-komp-1.png);}
+.desktop-section:nth-child(3){background-image: url(../Images/racunari-komp-2.png);}
+.desktop-section:nth-child(4){background-image: url(../Images/racunari-komp-3.png);}
+
+// Animations
+.para-container--transform{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.img-container--transform{
+    opacity: 1;
+}
+
+.img-container__img--transform{
+    pointer-events: all;
+    cursor: pointer;
+}
+
+@import 'media-desktop';
+
+
+

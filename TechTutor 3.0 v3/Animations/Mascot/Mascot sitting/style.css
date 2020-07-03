@@ -1,0 +1,57 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2e2c2c;
+}
+
+.animacija{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+svg{
+    width: 500px;
+    height: 500px;
+}
+
+#noga-desna {
+    animation: mahanje-noge 1s alternate infinite;
+    transform-origin: 50% 50% ;
+    
+}
+
+@keyframes mahanje-noge {
+    0% {
+        transform: rotate(8deg);
+    }
+    
+    100% {
+        transform: rotate(-6deg);
+    }
+  } 
+
+
+#noga-leva {
+    animation: mahanje-noge2 1s alternate infinite;
+    transform-origin: 50% 50% ;
+    
+}
+
+@keyframes mahanje-noge2 {
+    0% {transform: rotate(-8deg);
+    }
+    
+    100% {
+        transform: rotate(15deg);
+    }
+  } 
+
+
+

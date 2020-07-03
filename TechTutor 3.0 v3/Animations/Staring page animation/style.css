@@ -1,0 +1,157 @@
+.starting-page__animation{
+    height: 672px;
+    justify-content: center;
+    z-index: -1;
+}
+
+.starting-page__animation svg{ 
+    margin-top: 104px;
+    width: 600px;
+    height: 600px;
+}
+
+svg #sredina{
+    position: relative;
+}
+
+/* DOLE DESNO */
+
+svg #dole_desno{
+    animation-name: dole-desno;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes dole-desno{
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }
+
+    50% {
+        transform: translateX(-20px) translateY(20px); 
+        animation-delay: 0.3s;  
+    }
+  
+    100%{
+        transform: translateX(0px) translateY(0px);
+    }
+}
+
+/* DOLE LEVO */
+
+svg #dole_levo{
+    animation-name: dole-levo;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes dole-levo{
+    0%{
+        transform: translateX(0px) translateY(0px);
+    }
+
+    50%{ 
+        transform: translateX(-30px) translateY(30px); 
+        animation-delay: 0.5s;    
+    }
+
+    100% {
+        transform: translateX(0px) translateY(0px);
+    }
+}
+
+/* GORE DESNO */
+
+svg #gore_desno{
+    animation-name: gore-desno;
+    animation-duration: 7s;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes gore-desno {
+    0%{
+        transform: translateX(0px) translateY(0px);
+    }
+
+    50%{ 
+        transform: translateX(30px) translateY(-30px); 
+        animation-delay: 0.5s;    
+    }
+    100%{
+        transform: translateX(0px) translateY(0px);
+    }
+}
+
+/* GORE LEVO */
+
+svg #gore_levo{
+    animation-name: gore-levo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes gore-levo{
+    0%{
+        transform: translateX(0px) translateY(0px);
+    }
+
+    50%{ 
+        transform: translateX(20px) translateY(-20px); 
+        animation-delay: 0.3s;    
+    }
+
+    100%{
+        transform: translateX(0px) translateY(0px);
+    }
+}
+
+.starting-page__animation .bgd-image{
+    background-image: url(telefoni-1.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 480px;
+    height: 544px;
+    z-index: -1;
+    animation-name: promena-pozadine;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;     
+}
+
+@keyframes promena-pozadine {
+    0%{
+        background-image: url(telefoni-1.png);
+    }
+
+    33%{
+        background-image: url(laptop-1.png);
+    }
+
+    66%{
+        background-image: url(pc-1.png);
+    }
+
+    100%{
+        background-image: url(telefoni-1.png);
+    }
+
+}
+
+@media (max-width: 1190px), (max-height: 900px){
+    .starting-page__animation .bgd-image{
+        width: 400px;
+        height: 400px;
+    }
+
+    .starting-page__animation{
+        align-items: center;
+    }
+
+    .starting-page__animation svg{ 
+        margin-top: 200px;
+        width: 400px;
+        height: 400px;
+    }
+}
