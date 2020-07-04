@@ -1,0 +1,122 @@
+.main-circuit-lines{
+    width: 100%;
+    min-height: calc(100vh - 120px);
+    position: absolute;
+    z-index: -10;
+}
+
+#svg-gore{
+    width: 15vw;
+    height: 30vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 0;
+    animation: my-animation 1s;
+}
+
+#svg-dole{
+    width: 15vw;
+    height: 40vh;
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 0;
+    animation: my-animation 1s;
+}
+
+@keyframes my-animation{
+    0%{
+        stroke-dashoffset: 2000;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes my-animation{
+    0%{
+        stroke-dashoffset: -2000;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+} 
+
+.group-1 {
+    animation: blink-green1 8s 1.5s infinite ease-in-out, appear 1.5s;
+}
+
+.group-2 {
+    animation: blink-green2 8s 5s infinite ease-in-out, appear 1.5s;    
+}
+
+path, circle{    
+    animation: appear 2.5s;            
+}
+
+@keyframes appear{
+    0%{  
+        opacity: 0;
+    }
+
+    25%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0;
+    }
+
+    75%{
+        opacity: 0;
+    }
+
+    80%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@keyframes blink-green1{
+    0%, 10%{
+        filter: none;
+        fill: #1e1e1e;       
+    }
+
+    10%, 30%{
+        filter: url(#red-glow);
+        fill: #54DE62;
+    } 
+
+    40%, 100%{
+        filter: none;
+        fill: #1e1e1e;
+    }
+}
+
+@keyframes blink-green2{
+    0%, 50%{
+        filter: none;
+        fill: #1e1e1e;
+    }
+
+    50%, 70%{
+        filter: url(#red-glow);
+        fill: #54DE62; 
+    }
+
+    70%, 100%{
+        filter: none;
+        fill: #1e1e1e;
+    }
+}
+

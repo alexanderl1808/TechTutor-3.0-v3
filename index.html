@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
+    <link rel="stylesheet" href="./Animations/Staring page animation/style.css">
+    <link rel="stylesheet" href="./Animations/Mascot/Mascot wave/style.css">
     <link rel="stylesheet" href="./CSS/styles.css">
     <link rel="stylesheet" href="./CSS/home.css">
-    <link rel="stylesheet" href="./Animations/Mascot/Mascot wave/style.css">
+    <link rel="icon" href="./Images/logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/2.0.0/jquery.localScroll.min.js" defer></script>
     <script src="./JS/scripts.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,18 +41,51 @@
             <div class="starting-page">
                 <div class="starting-page__content">
                     <div class="staring-page__text">
-                        <h1 class="staring-page__main-heading">Tech<br>Tutor</h1>
-                        <h3 class="staring-page__sub-heading">Sastavljanje računara ne mora da bude komplikovano...</h3>
+                        <h1 class="starting-page__main-heading">Tech<br>Tutor</h1>
+                        <h3 class="starting-page__sub-heading">Sastavljanje računara ne mora da<br>bude komplikovano...</h3>
                     </div>
-                    <div class="staring-page__animation"> 
+                    <div class="starting-page__animation">
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 735 504" style="enable-background:new 0 0 735 504;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0{fill:#54DE62;}
+                        </style>
+                        <g id="gore_desno">
+                            <g transform="matrix(1, 0, 0, 1, 1105.1, 335.56)">
+                                <path class="st0" d="M-609.38-129.23l24.16-5.41l122.69-104.45l45.02-38.32l-21.6,5.68L-609.38-129.23z"/>
+                            </g>
+                        </g>
+                        <g id="gore_levo">
+                            <g transform="matrix(1, 0, 0, 1, 1105.1, 335.56)">
+                                <path class="st0" d="M-580.55-229.33l12.13-2.75l25.12-21.61l36.51-31.42l22.61-19.46l-10.84,2.89L-580.55-229.33z"/>
+                            </g>
+                        </g>
+                        <g id="sredina">
+                            <polygon class="st0" points="642.28,69.08 603.52,79.31 297.86,335.53 332.7,327.71 212.57,428.63 247.63,420.74 425.72,268.55 
+                                491.07,212.71 466.1,219.32 561.47,137.99 	"/>
+                        </g>
+                        <g id="dole_desno">
+                            <g transform="matrix(1, 0, 0, 1, 1105.1, 335.56)">
+                                <path class="st0" d="M-878.98,114.92l13.88-3.14l28.75-24.65l41.8-35.83l25.88-22.19l-12.41,3.3L-878.98,114.92z"/>
+                            </g>
+                        </g>
+                        <g id="dole_levo">
+                            <path class="st0" d="M66.75,478l24.48-5.01l127.32-106.51l46.71-39.08l-32.58,9.86L66.75,478z"/>
+                        </g>
+                        </svg>
+                        <div class="bgd-image"></div>
                     </div>
                 </div>
                 <div class="pointer">
                     <h4>Istraži</h4>
-                    <div class="pointer__img"></div>
+                    <a href="#pointer">
+                        <div class="pointer__img"></div>
+                    </a>
                 </div>
             </div>
-            <div class="home-section">
+            <div class="home-section" id="pointer">
                 <div class="home-section__text para-container--animate">
                     <h2 class="home-section__heading">Cemu ovo služi?</h2>
                     <p class="para--animate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, modi. Quibusdam impedit suscipit magnam consequatur. Fugit tenetur libero esse at obcaecati, delectus sunt! Perspiciatis atque est rem non, quo laboriosam.</p>
@@ -74,7 +112,7 @@
             </div>
             <div class="footer-contact">
                 <h2>Kontakt</h2>
-                <h3>milanradinovic@rocketmai.com - Web Developer</h3>
+                <h3>milanradinovic@rocketmail.com - Web Developer</h3>
                 <h3>aleksandarlazarevichw@gmail.com - UI/UX Designer</h3>
             </div>
         </div>

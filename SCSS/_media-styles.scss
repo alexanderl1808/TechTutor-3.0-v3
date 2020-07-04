@@ -1,0 +1,48 @@
+@media (min-width: 1190px){
+    .navbar{
+        position: static;
+        transform: none;
+        transition: none;
+
+        ul{
+           display: flex; 
+        }
+    }
+
+    .burger{
+        display: none;
+    }
+
+    .footer-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer{
+        h2{
+            font-size: var(--font-large);
+        }
+
+        h3{
+            font-size: var(--font-medium);
+        }
+
+        .footer-contact{
+            h3{
+                padding: 10px;
+            }
+        }
+    }
+
+    .pointer{
+        &__img{
+            width: 150px;
+            height: 80px;
+        }
+    }
+
+    .logo{
+        width: 150px;
+    }
+}

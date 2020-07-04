@@ -3,12 +3,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-image: none;
 
     &__content{
         display: flex;
         flex-grow: 1;
         align-items: center;
         justify-content: center;
+    }
+
+    &__animation{
+        display: none;
     }
 }
 
@@ -38,3 +43,9 @@
         background-position: center;
     }
 }
+
+.mascot--img{
+    display: none;
+}
+
+@import 'media-home';

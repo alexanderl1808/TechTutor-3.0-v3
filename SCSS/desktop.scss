@@ -15,7 +15,7 @@
     }
 
     &__heading{
-        font-size: $font-extra-large - 1.5rem;
+        font-size: calc(var(--font-extra-large) - 1.5rem);
     }
 }
 
@@ -45,8 +45,8 @@
 
     // It has to be inside because of font-size specificity
     .fa-arrow-left, .fa-arrow-right{
-        color: $color-secondary;
-        font-size: $font-large;
+        color: var(--color-secondary);
+        font-size: var(--font-large);
         cursor: pointer;
     }
 
@@ -64,16 +64,14 @@
 
     &__img-price-container{
         position: absolute;
-        // top: 0;
-        // bottom: 0;
-        // left: 0;
-        // right: 0;
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        pointer-events: none;
+        cursor: normal;
     }
 
     &__img1{
@@ -87,15 +85,17 @@
 
     &__price{
         text-align: center;
-        color: $color-primary;
-        font-size: $font-large;
-        font-family: $font-primary;
+        color: var(--color-primary);
+        font-size: var(--font-large);
+        font-family: var(--font-primary);
         margin-top: 30px;
     }
 
     &__para-container{
+        width: 80%;
         opacity: 1;
         transition: opacity .5s ease, transform .5s ease; // transform for para-container scale animation
+        pointer-events: all;
     }
 }
 
@@ -106,11 +106,19 @@
 // Animations
 .para-container--transform{
     opacity: 0;
+    pointer-events: none;
 }
 
 .img-container--transform{
     opacity: 1;
 }
+
+.img-container__img--transform{
+    pointer-events: all;
+    cursor: pointer;
+}
+
+@import 'media-desktop';
 
 
 

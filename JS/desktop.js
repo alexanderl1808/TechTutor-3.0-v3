@@ -7,6 +7,7 @@ const arrowLeft = document.querySelectorAll('.fa-arrow-left');
 const arrowRight = document.querySelectorAll('.fa-arrow-right');
 const btn = document.querySelectorAll('.desktop-section__btn');
 const para = document.querySelectorAll('.desktop-section__para-container');
+const imgPrceCont = document.querySelectorAll('.desktop-section__img-price-container');
 
 const events = ['load', 'resize'];
 for(let event of events){
@@ -50,7 +51,23 @@ btn.forEach((btn, index) => {
         para[index].classList.toggle('para-container--transform');
         slidesContainer[index].classList.toggle('img-container--transform');
         arrows[index].classList.toggle('img-container--transform');
+        if(index === 0){
+            slidesFirst.forEach(imgPrice => {
+                imgPrice.classList.toggle('img-container__img--transform');
+            });
+        } else if(index === 1){
+            slidesSecond.forEach(imgPrice => {
+                imgPrice.classList.toggle('img-container__img--transform');
+            });
+        } else{
+            slidesThird.forEach(imgPrice => {
+                imgPrice.classList.toggle('img-container__img--transform');
+            });
+        }
     });
+
 });
+
+
 
 

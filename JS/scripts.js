@@ -23,3 +23,6 @@ for(let event of eventsAnimation){
     });
 }
 
+$('.pointer').localScroll();
+
+

@@ -1,0 +1,53 @@
+@media (min-width: 768px){
+    .starting-page{
+        background-image: radial-gradient(rgba(255, 255, 255, .04) 40%, transparent, transparent);
+        background-size: 60% 100%;
+        background-repeat: no-repeat;
+        background-position: right center;
+
+        &__content{
+            justify-content: space-between;
+        }
+
+        &__animation{
+            display: flex;
+        }
+
+        &__main-heading{
+            text-align: left;
+        }
+
+        &__sub-heading{
+            text-align: left;
+        }
+    }
+
+    .home-section{
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__text{
+            width: 45%;
+        }
+
+        &__mascot{
+            width: 40%;
+        }
+
+        &--img{
+            background-image: url(../Images/slika-skole.png);
+        }
+    }
+
+    .mascot--img{
+        background-image: url(../Images/maskota-1.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 100vh;
+        display: block;
+    }
+}
+
+
+

@@ -8,51 +8,51 @@
 
 html:lang(sr){
     .navbar__lang--sr{
-        color: $color-primary;
+        color: var(--color-primary);
     }
 }
 
 html:lang(en){
     .navbar__lang--en{
-        color: $color-primary;
+        color: var(--color-primary);
     }
 }
 
 body{
-    background-color: $color-bg;
+    background-color: var(--color-bg);
 }
 
 h1, h2, h4{
-    font-family: $font-primary;
-    color: $color-primary;
+    font-family: var(--font-primary);
+    color: var(--color-primary);
     text-align: center;
 }
 
 h3, p{
-    font-family: $font-secondary;
-    color: $color-secondary;
+    font-family: var(--font-secondary);
+    color: var(--color-secondary);
     text-align: center;
 }
 
 h1{
-    font-size: $font-extra-large;
+    font-size: var(--font-extra-large);
 }
 
 h2{
-    font-size: $font-large;
+    font-size: var(--font-large);
 }
 
 h3{
-    font-size: $font-medium;
+    font-size: var(--font-medium);
 }
 
 h4, p{
-    font-size: $font-small;
+    font-size: var(--font-small);
 }
 
 p{
     line-height: 1.6;
-    padding: 10px;
+    padding: 15px;
 }
 
 svg{
@@ -60,7 +60,7 @@ svg{
 }
 
 header{
-    background-color: $color-bg;
+    background-color: var(--color-bg);
     height: 120px;
     position: sticky; // Because nav is absolute
     top: 0;
@@ -71,11 +71,11 @@ footer{
     background-color: #0D0D0D;
 
     h3{
-        font-size: $font-small;
+        font-size: var(--font-small);
     }
 
     h2{
-        font-size: $font-medium;
+        font-size: var(--font-medium);
     }
 }
 
@@ -104,20 +104,22 @@ footer{
     }
 
     &__link{
-        color: $color-secondary;
-        font-family: $font-secondary;
-        font-size: $font-medium;
+        color: var(--color-secondary);
+        font-family: var(--font-secondary);
+        font-size: var(--font-medium);
         text-decoration: none;
         transition: color .2s ease;
     }
 
     &__link:hover{
-        color: $color-primary;
+        color: var(--color-primary);
     }
 
     &__lang{
-        color: $color-secondary;
-        font-family: $font-secondary;
+        color: var(--color-secondary);
+        font-family: var(--font-secondary);
+        font-size: var(--font-medium);
+        padding-left: 30px;
     }
 }
 
@@ -132,7 +134,7 @@ footer{
     &__line{
         height: 1px;
         width: 50px;
-        background-color: $color-primary;
+        background-color: var(--color-primary);
         margin: 10px;
     }
 }
@@ -140,7 +142,7 @@ footer{
 .pointer{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     transform: translateY(10px);
     transition: transform .5s ease;
@@ -157,18 +159,18 @@ footer{
 
 .btn{
     text-decoration: none;
-    font-family: $font-primary;
-    color: $color-primary;
-    border: 2px solid $color-primary;
-    padding: 8px;
-    font-size: $font-medium;
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    padding: 10px;
+    font-size: var(--font-small);
     cursor: pointer;
     transition: all .2s ease;
 }
 
 .btn:hover{
     color: black;
-    background-color: $color-primary;
+    background-color: var(--color-primary);
 }
 
 .header-container, .main-container, .footer-container{
@@ -192,12 +194,12 @@ footer{
 
 ::-moz-selection{
     color: #141414;
-    background: $color-primary;
+    background: var(--color-primary);
 }
 
 ::selection{
     color: #141414;
-    background: $color-primary;
+    background: var(--color-primary);
 }
 
 // Animations
@@ -220,4 +222,6 @@ footer{
     background-color: rgba(0, 0, 0, .5);
     transition: box-shadow .5s ease, background-color .5s ease;
 }
+
+@import 'media-styles';
 

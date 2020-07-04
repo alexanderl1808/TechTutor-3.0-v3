@@ -1,6 +1,5 @@
 .starting-page__animation{
     height: 672px;
-    display: flex;
     justify-content: center;
     z-index: -1;
 }

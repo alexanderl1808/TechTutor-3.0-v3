@@ -1,0 +1,22 @@
+@media (min-width: 1190px){
+    .desktop-section{
+        background-size: cover;
+
+        .arrow{
+            display: none;
+        }
+
+        &__img-price-container{
+            position: static;
+            margin: 20px;
+        }
+        
+        &__img-price-container:hover{
+            background-color: var(--color-bg);
+            transform: scale(1.1);
+            border-radius: 5px;
+            box-shadow: 5px 20px 30px black;
+            transition: background-color .5s ease, transform .5s ease, box-shadow .5s ease;
+        }
+    }
+}

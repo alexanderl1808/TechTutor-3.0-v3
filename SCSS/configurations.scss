@@ -1,9 +1,16 @@
 @import 'config';
 
+main{
+    background-image: url(../Images/opste.png);
+    background-repeat: no-repeat;
+    background-size: 120% 60%;
+    background-position: center;
+}
+
 table{
     text-align: center;
-    font-size: $font-small;
-    background-color: $color-bg;
+    font-size: var(--font-small);
+    background-color: var(--color-bg);
     border-radius: 5px;
     box-shadow: 5px 20px 30px black;
     background-color: rgba(0, 0, 0, .5);
@@ -12,20 +19,22 @@ table{
 
 th{
     margin: 0;
-    color: $color-primary;
-    font-family: $font-primary;
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+    font-size: var(--font-medium);
 }
 
 td{
     margin: 0;
     padding: 0 5px 0 5px;
-    color: $color-secondary;
-    font-family: $font-secondary;
+    color: var(--color-secondary);
+    font-family: var(--font-secondary);
 }
 
 .final-price-td{
-    color: $color-primary;
-    font-family: $font-primary;
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+    font-size: var(--font-medium);
     text-align: center;
     padding-top: 15px;
 }
@@ -43,4 +52,25 @@ td{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+
+    &__table{
+        position: relative;
+    }
+
+    &__mascot{
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateY(-55%);
+    }
+
+    &__heading{
+        margin-bottom: 50px;
+    }
 }
+
+.btn--table{
+    display: inline-block;
+}
+
+@import 'media-configurations';
