@@ -29,6 +29,7 @@
     z-index: 10;
     transition: opacity .5s ease;
     opacity: 0;
+    // pointer-events: none;
 }
 
 .desktop-section{
@@ -48,6 +49,19 @@
         color: var(--color-secondary);
         font-size: var(--font-large);
         cursor: pointer;
+        z-index: 10;
+        position: absolute;
+        transition: opacity .5s ease;
+    }
+
+    .fa-arrow-left{
+        left: 0;
+        opacity: 0;
+    }
+
+    .fa-arrow-right{
+        right: 0;
+        opacity: 0;
     }
 
     &__img-container{
@@ -74,7 +88,7 @@
         cursor: normal;
     }
 
-    &__img1{
+    &__img{
         background-image: url(../Images/g1.png);
         background-size: contain;
         background-repeat: no-repeat;
@@ -103,6 +117,18 @@
 .desktop-section:nth-child(3){background-image: url(../Images/racunari-komp-2.png);}
 .desktop-section:nth-child(4){background-image: url(../Images/racunari-komp-3.png);}
 
+.img--1{background-image: url(../Images/opste1.png);}
+.img--2{background-image: url(../Images/opste2.png);}
+.img--3{background-image: url(../Images/opste3.png);}
+.img--4{background-image: url(../Images/gejmerski1.png);}
+.img--5{background-image: url(../Images/gejmerski2.png);}
+.img--6{background-image: url(../Images/gejmerski3.png);}
+.img--7{background-image: url(../Images/gejmerski4.png);}
+.img--8{background-image: url(../Images/workstation1.png);}
+.img--9{background-image: url(../Images/workstation2.png);}
+.img--10{background-image: url(../Images/workstation3.png);}
+.img--11{background-image: url(../Images/workstation4.png);}
+
 // Animations
 .para-container--transform{
     opacity: 0;
@@ -110,6 +136,10 @@
 }
 
 .img-container--transform{
+    opacity: 1;
+}
+
+.desktop-section .arrow--transform{
     opacity: 1;
 }
 

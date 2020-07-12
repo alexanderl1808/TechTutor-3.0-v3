@@ -2,7 +2,7 @@ const slidesContainer = document.querySelectorAll('.desktop-section__img-contain
 const slidesFirst = document.querySelectorAll('.slides-first');
 const slidesSecond = document.querySelectorAll('.slides-second');
 const slidesThird = document.querySelectorAll('.slides-third');
-const arrows = document.querySelectorAll('.arrow');
+const arrows = document.querySelectorAll('.fa-arrow-left, .fa-arrow-right');
 const arrowLeft = document.querySelectorAll('.fa-arrow-left');
 const arrowRight = document.querySelectorAll('.fa-arrow-right');
 const btn = document.querySelectorAll('.desktop-section__btn');
@@ -49,24 +49,33 @@ arrowLeft.forEach((arrow, index) => {
 btn.forEach((btn, index) => {
     btn.addEventListener('click', () => {
         para[index].classList.toggle('para-container--transform');
-        slidesContainer[index].classList.toggle('img-container--transform');
-        arrows[index].classList.toggle('img-container--transform');
+        slidesContainer[index].classList.toggle('img-container--transform');  
         if(index === 0){
             slidesFirst.forEach(imgPrice => {
                 imgPrice.classList.toggle('img-container__img--transform');
             });
+            for(let i = 0; i < 2; i++){
+                arrows[i].classList.toggle('arrow--transform');
+            }
         } else if(index === 1){
             slidesSecond.forEach(imgPrice => {
                 imgPrice.classList.toggle('img-container__img--transform');
             });
+            for(let i = 2; i < 4; i++){
+                arrows[i].classList.toggle('arrow--transform');
+            }
         } else{
             slidesThird.forEach(imgPrice => {
                 imgPrice.classList.toggle('img-container__img--transform');
             });
+            for(let i = 4; i < 6; i++){
+                arrows[i].classList.toggle('arrow--transform');
+            }
         }
     });
-
 });
+
+
 
 
 
