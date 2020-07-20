@@ -64,7 +64,7 @@ header{
     height: 120px;
     position: sticky; // Because nav is absolute
     top: 0;
-    z-index: 10;
+    z-index: 20;
 }
 
 footer{
@@ -111,7 +111,7 @@ footer{
         transition: color .2s ease;
     }
 
-    &__link:hover{
+    &__link:hover:not(.navbar__lang--sr):not(.navbar__lang--en){
         color: var(--color-primary);
     }
 
