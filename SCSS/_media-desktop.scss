@@ -6,6 +6,10 @@
             display: none;
         }
 
+        &__img-container{
+            transform: none !important; // JS inline style overrides it
+        }
+
         &__img-price-container{
             position: static;
             margin: 20px;

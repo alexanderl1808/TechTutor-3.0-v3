@@ -53,6 +53,11 @@ td{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    &__btn{
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .conf-table{
@@ -76,6 +81,19 @@ td{
     &__heading{
         margin-bottom: 50px;
     }
+}
+
+.conf-recomendations{
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__heading{
+        margin-bottom: 50px;
+    }
+
 }
 
 .btn--table{

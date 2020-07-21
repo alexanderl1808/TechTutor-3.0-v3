@@ -20,17 +20,17 @@
 }
 
 // It has to be outside becase of opacity specificity
-.arrow{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    position: absolute; 
-    top: 50%;
-    z-index: 10;
-    transition: opacity .5s ease;
-    opacity: 0;
-    // pointer-events: none;
-}
+// .arrow{
+//     width: 100%;
+//     display: flex;
+//     justify-content: space-between;
+//     position: absolute; 
+//     top: 50%;
+//     z-index: 10;
+//     transition: opacity .5s ease;
+//     opacity: 0;
+//     pointer-events: none;
+// }
 
 .desktop-section{
     min-height: 100vh;
@@ -52,16 +52,16 @@
         z-index: 10;
         position: absolute;
         transition: opacity .5s ease;
+        pointer-events: none;
+        opacity: 0;
     }
 
     .fa-arrow-left{
         left: 0;
-        opacity: 0;
     }
 
     .fa-arrow-right{
         right: 0;
-        opacity: 0;
     }
 
     &__img-container{
@@ -141,6 +141,7 @@
 
 .desktop-section .arrow--transform{
     opacity: 1;
+    pointer-events: all;
 }
 
 .img-container__img--transform{
